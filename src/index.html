@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head/_head.html',{
+"lang":"en",
+"title":"Test Task",
+"description":"",
+"keywords":"Test Task",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	<div class="bg">
+	</div>
+	@@include('components/page-blocks/_header/_header.html')
+	<main class="main">
+		<section class="hero">
+			<h1 class="hero__title hero-title">Instantly Connect with Your Leads</h1>
+			<div class="hero__wrap hero-wrap">
+				@@include('components/bem-blocks/card/card.html', {
+					"class" : "card-1",
+					"card-title": "Basic Survival",
+					"card-value": "30",
+					"features-plan": "Basic",
+					"list-item": "<li class='card-features-list__item card-features-list-item'>Email addresses</li><li class='card-features-list__item card-features-list-item'>Phone numbers</li><li class='card-features-list__item card-features-list-item'>Unlimited Lists</li>",
+					"btn-text": "Start Free Trial",
+					"btn-class": "btn-card",
+					"btn-svg": "",
+				})
+				@@include('components/bem-blocks/card/card.html', {
+					"class": "card-2 card--dark",
+					"card-title": "Mission Professional",
+					"card-value": "276",
+					"features-plan": "Boost Tools",
+					"list-item": "<li class='card-features-list__item card-features-list-item'>Email addresses</li><li class='card-features-list__item card-features-list-item'>Phone numbers</li><li class='card-features-list__item card-features-list-item'>Unlimited Lists</li><li class='card-features-list__item card-features-list-item card-features-list-item--strong'>Export contacts</li><li class='card-features-list__item card-features-list-item card-features-list-item--strong'>Prospecting</li><li class='card-features-list__item card-features-list-item card-features-list-item--strong'>50MB Per File Attachment</li>",
+					"btn-class": "btn-card btn-card--red",
+					"btn-text": "Get Started",
+					"btn-svg": "<svg class='btn-card__svg btn-card-svg' width='4' height='6' viewBox='0 0 4 6' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.24153 0.740234L3.22053 2.71923L1.24153 4.69823' stroke='#BC4749' stroke-width='0.989498' stroke-linecap='square'/></svg>",
+				})
+				@@include('components/bem-blocks/card/card.html', {
+					"class" : "card-3",
+					"card-title": "Rocketship Premium",
+					"card-value": "420",
+					"features-plan": "Super Fuel",
+					"list-item": "<li class='card-features-list__item card-features-list-item'>Email addresses</li><li class='card-features-list__item card-features-list-item'>Phone numbers</li><li class='card-features-list__item card-features-list-item'>Unlimited Lists</li><li class='card-features-list__item card-features-list-item'>Export contacts</li><li class='card-features-list__item card-features-list-item'>Prospecting</li><li class='card-features-list__item card-features-list-item card-features-list-item--strong'>50MB Per File Attachment</li><li class='card-features-list__item card-features-list-item card-features-list-item--strong'>Basic analytics</li>",
+					"btn-text": "Start Free Trial",
+					"btn-class": "btn-card",
+					"btn-svg": "",
+				})
+			</div>
+		</section>
+	</main>
+	@@include('components/page-blocks/_footer/_footer.html')
+	@@include('components/page-blocks/_scripts/_scripts.html')
+</body>
+
+</html>

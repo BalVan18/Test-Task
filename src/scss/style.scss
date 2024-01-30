@@ -1,0 +1,53 @@
+@import 'base/*.scss';
+@import 'global/*.scss';
+@import '../components/**/**/*.scss';
+
+// body
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include bg(100%);
+  background-image: url(../img/bg.svg);
+  z-index: -1;
+
+  &::after {
+    content: "";
+    @include bg("contain", "top");
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/shapes.svg);
+  }
+}
+// main
+.main {
+  @include container(1250px, 1.5em, 1.5em);
+}
+
+// hero
+.hero {
+  &__title {
+    text-align: center;
+    margin-bottom: calc(var(--gap) * 2);
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.hero-title {
+  font-size: 41.455px;
+  font-weight: 600;
+  line-height: normal;
+}

@@ -1,0 +1,54 @@
+<header class="header">
+    <a href="#" class="header__logo header-logo">
+        @@include('../../bem-blocks/_sprite/_sprite.html', {
+            "class": "header-logo__svg header-logo-svg",
+            "id": "logo",
+        })
+        <s class="header-logo__text header-logo-text">Test Task</s>
+    </a>
+    <nav class="header__nav header-nav">
+        <ul class="header-nav__list header-nav-list">
+            <li class="header-nav-list__item header-nav-list-item">
+                <a href="#" class="header-nav-list-item__link header-nav-list-item-link">
+                    About Us
+                </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list-item">
+                <a href="#" class="header-nav-list-item__link header-nav-list-item-link">
+                    Features
+                </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list-item">
+                <a href="#" class="header-nav-list-item__link header-nav-list-item-link">
+                    Pricing
+                </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list-item">
+                <a href="#" class="header-nav-list-item__link header-nav-list-item-link">
+                    Product
+                </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list-item">
+                <a href="#" class="header-nav-list-item__link header-nav-list-item-link">
+                    Contact
+                </a>
+            </li>
+        </ul>
+        <div class="header-nav__authorization header-nav-authorization">
+            @@include('../../bem-blocks/button/button.html',{
+                "class": "header-nav-authorization__login header-nav-authorization-login",
+                "text": "Login",
+                "svg": "",
+            })
+            @@include('../../bem-blocks/button/button.html',{
+                "class": "btn--red header-nav-authorization__signup header-nav-authorization-signup",
+                "text": "Sign Up",
+                "svg": "",
+            })
+        </div>
+        <div class="header-nav__burger header-nav-burger">
+            <span class="header-nav-burger__line header-nav-burger-line header-nav-burger-line--1"></span>
+            <span class="header-nav-burger__line header-nav-burger-line header-nav-burger-line--2"></span>
+        </div>
+    </nav>
+</header>

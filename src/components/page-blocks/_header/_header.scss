@@ -1,0 +1,153 @@
+.header {
+  @include container(1250px, 3em, 1.5em);
+
+  display: flex;
+  margin-bottom: 46px;
+  padding-top: 35px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+  }
+}
+
+.header-logo {
+  @include btn-anim();
+
+  &__svg {
+    width: 23.493px;
+    height: 15.658px;
+    margin-right: 5px;
+  }
+}
+
+.header-logo-text {
+  font-size: 11.446px;
+  font-weight: 700;
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    gap: 48.36px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__authorization {
+    display: flex;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    
+    @media (max-width: 991px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    justify-content: flex-end;
+  }
+}
+
+.header-nav-list-item {
+  position: relative;
+}
+
+.header-nav-list-item:nth-child(3) {
+  .header-nav-list-item-link{
+    font-weight: 600;
+  }
+}
+
+.header-nav-list-item-link {
+  font-size: 12.091px;
+  padding: 7px 0;
+  outline: none;
+
+  &::before {
+    @include trs();
+    position: absolute;
+    content: "";
+    background-color: var(--white);
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    width: 0;
+    height: 1px;
+  }
+
+  &:hover::before {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+
+  &:focus-visible::before {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+
+  &:active::before {
+    width: 0;
+    right: 50%;
+    left: 50%;
+  }
+}
+
+.header-nav-authorization {
+  &__login {
+    margin-right: 16px;
+  }
+}
+
+.header-nav-burger {
+  &__line {
+    display: block;
+    width: 35px;
+    height: 1px;
+  }
+}
+
+.header-nav-burger-line {
+  @include trs();
+  background-color: var(--btn-red);
+
+  &--1 {
+    margin-bottom: 6px;
+  }
+}
+
+.active {
+  .header-nav-burger-line {
+    &--1 {
+      margin-bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    &--2 {
+      transform: rotate(-45deg);
+    }
+  }
+
+}
