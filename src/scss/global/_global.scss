@@ -5,10 +5,9 @@
 	font-family: 'Inter', sans-serif;
 	font-size: 12px;
 	font-weight: 400;
-	
 }
 
-:root{
+:root {
 	--white: #FFFFFF;
 	--black: #000000;
 	--btn-red: #BC4749;
@@ -19,10 +18,16 @@
 	--gap: 30px
 }
 
+html {
+	height: 100%;
+
+	@media (max-width: 991px) {
+		height: auto;
+	}
+}
 
 html,
 body {
-	min-height: 100%;
 	position: relative;
 }
 
@@ -32,18 +37,10 @@ body {
 	color: var(--white);
 	background: var(--body-bg);
 	-webkit-tap-highlight-color: transparent;
-	
-	@media (min-width: 1921px) {
-       zoom: 150%;
-    }
+}
 
-	@media (min-width: 2561px) {
-		zoom: 175%;
-	}
-
-	@media (min-width: 3201px) {
-		zoom: 200%;
-	 }
+.body--active {
+	overflow-y: hidden;
 }
 
 img {
@@ -52,10 +49,6 @@ img {
 
 button {
 	-webkit-tap-highlight-color: transparent;
-}
-
-.container {
-	@include container(1170px, 0)
 }
 
 ul,
