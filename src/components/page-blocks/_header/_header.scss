@@ -39,10 +39,15 @@
     align-items: flex-start;
     background: var(--body-bg);
     z-index: 2;
+    padding-bottom: calc(var(--gap) * 2);
 
     .header-logo {
       position: absolute
     }
+
+    @media screen and (orientation:landscape) {
+      overflow-y: auto;
+	  }
   }
 }
 
